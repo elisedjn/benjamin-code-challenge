@@ -1,0 +1,54 @@
+body {
+  background-color: rgb(0, 6, 47);
+  color: #fff500;
+  border: 5px solid #fff500;
+}
+
+.first-line{
+  border-bottom: 5px solid #fff500;
+  font-size: 8rem;
+  animation: slide 30s infinite linear;
+}
+
+.first-line h2:nth-child(odd), .second-line h4:nth-child(odd){
+  color: transparent;
+  -webkit-text-stroke: 2px #fff500;
+}
+
+
+.second-line{
+  border-bottom: 5px solid #fff500;
+  font-size: 5rem;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.main-part{
+  display: flex;
+}
+
+.presentation svg {
+  fill: #fff500;
+  width: 30px;
+}
+
+.mail {
+  display: flex;
+  align-items: center;
+}
+
+.italic{
+  font-style: italic;
+}
+
+.underline{
+  text-decoration: underline;
+}
