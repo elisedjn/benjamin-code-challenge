@@ -6,8 +6,18 @@ body {
 
 .first-line{
   border-bottom: 5px solid #fff500;
-  font-size: 8rem;
-  animation: slide 30s infinite linear;
+  font-size: 5rem;
+  overflow: hidden;
+}
+
+.first-line .marquee{
+  animation: slide-first-line 30s infinite linear;
+  display: flex;
+}
+
+.first-line h2{
+  margin: 0px;
+  min-width: 900px;
 }
 
 .first-line h2:nth-child(odd), .second-line h4:nth-child(odd){
@@ -15,19 +25,39 @@ body {
   -webkit-text-stroke: 2px #fff500;
 }
 
-
-.second-line{
-  border-bottom: 5px solid #fff500;
-  font-size: 5rem;
-}
-
-@keyframes slide {
+@keyframes slide-first-line {
   from {
-    transform: translateX(100%);
+    transform: translateX(0px);
   }
 
   to {
-    transform: translateX(0%);
+    transform: translateX(-1437px);
+  }
+}
+
+.second-line{
+  border-bottom: 5px solid #fff500;
+  font-size: 3rem;
+  overflow: hidden;
+}
+
+.second-line .marquee{
+  animation: slide-second-line 30s infinite linear;
+  display: flex;
+}
+
+.second-line h4{
+  margin: 0px;
+  min-width: 900px;
+}
+
+@keyframes slide-second-line {
+  from {
+    transform: translateX(-1437px);
+  }
+
+  to {
+    transform: translateX(0px);
   }
 }
 
